@@ -1,0 +1,35 @@
+version 7.0
+set nocp
+
+set fileencodings=utf-8,latin1,default
+set helplang=en
+set history=500
+set ruler
+
+" status line
+set laststatus=2
+set statusline=%m%f%y
+set statusline+=%=
+set statusline+=%l/%L
+hi StatusLine term=reverse ctermfg=0 ctermbg=white gui=bold,reverse
+
+" line number
+set number
+highlight LineNr ctermfg=darkgrey
+
+" whitespace
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+
+" indentation
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" ctrl-s save shortcut
+inoremap <C-S> <esc>:w<cr>
+nnoremap <C-S> :w<cr>
+
+" disable Ex mode key binding
+nnoremap Q <nop>
